@@ -1,0 +1,8 @@
+city,temperature,humidity,temp,Humidity
+new york,65,56,mean=67.8,mean=68.4
+new york,65,66,median=66,median=66
+new york,66,60,mode=65,mode=80
+mumbai,75,80,variance=14.16,variance=99.84
+mumbai,68,80,SD=3.76,SD=9.99
+calculate mean median mode  for both columns ,,,,
+SD and variance for both columns in Note book,,,,

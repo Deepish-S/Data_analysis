@@ -1,0 +1,31 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv("Book1.csv")
+df
+
+count = df['city'].value_counts()
+print(count)
+
+
+count = df.groupby(['city']).count()
+print(count)
+
+df.mean()
+
+df.median()
+df.mode(numeric_only=True)
+
+df.describe()
+
+temperature_variance = df['temperature'].var()
+print(temperature_variance)
+
+humidity_variance = df['humidity'].var()
+print(humidity_variance)
+
+temperature_stddev = df['temperature'].std()
+print(temperature_stddev)
+
+
+humidity_stddev = df['humidity'].std()
+print(humidity_stddev)

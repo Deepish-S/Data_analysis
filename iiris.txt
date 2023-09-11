@@ -1,0 +1,12 @@
+
+Solve the following
+1)Download csv from google
+2)upload in juypter notebook
+3)load/read csv file
+4)display count of rows and Columns
+5) Display data type of each column
+6)Displat first 3 record(  df.head(3))
+7)Display last 3 record
+8) Display count of null values
+9)Display info of file
+10 Diplay the data of one category 

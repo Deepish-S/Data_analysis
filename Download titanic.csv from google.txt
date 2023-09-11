@@ -1,0 +1,9 @@
+Download titanic.csv from google
+or 
+weather.csv
+or
+ car.csv
+and practise  all commands
+as in exam any csv file will come for download and to do operation
+
+********keep searching as internet speed is slow
