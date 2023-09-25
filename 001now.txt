@@ -1,0 +1,19 @@
+import pandas as pd
+import numpy as np
+df = pd.read_csv("calori.csv")
+df
+
+df.shape
+
+df.drop_duplicates (inplace = True)
+
+df.shape
+
+
+for x in df.index:
+    if df.loc[x, "Time"] >= 120:
+        df.loc[x, "Time"] = 60
+
+for x in df.index:
+    if df.loc[x, "Pulse"] < 100:
+        df.loc[x, "Pulse"] = 110
