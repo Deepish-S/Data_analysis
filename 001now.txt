@@ -17,3 +17,10 @@ for x in df.index:
 for x in df.index:
     if df.loc[x, "Pulse"] < 100:
         df.loc[x, "Pulse"] = 110
+df['Date'] = pd.to_datetime(df['Date'])
+df
+df.dtypes
+df['Pulse'].median()
+
+d2 = df.copy(deep = True)
+d2
