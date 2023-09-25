@@ -24,3 +24,13 @@ df['Pulse'].median()
 
 d2 = df.copy(deep = True)
 d2
+
+d2['Pulse'] = (d2['Pulse'].fillna(d2['Pulse'].median()))
+d2
+d3=df.copy(deep=True)
+d3
+d3['Pulse'].mode()
+
+d3.fillna(d3.mode().iloc[0])
+#or
+d3.fillna(d3.mode().iloc[1])     
