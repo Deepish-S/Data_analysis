@@ -1,0 +1,40 @@
+7. Develop the python script to import excel data into a Pandas data frame and pg excel data b. Fill in the missing values. c. Perform univariate analysis 
+as 0 import pandas as pd 
+[2] dfl = pd.read_excel(lab7.xlsx') 
+print(dfl) 
+Name Age Stream Percentage 0 Ankit 18 Nth 95 1 Rahul 19 Science 85 2 Shaurya 20 Commerce 85 3 Raghu 18 Math 80 4 Priya 19 Science 75 
+- a. Get the data types of the given excel data 
+[4] dfl.dtypes 
+Name object Age int64 Stream object Percentage int64 dtype: object rr
+
+
+- c. Perform univariate analysis 
+• [5] df1UPercentage'Lmean() DZ 
+84.0 
+[6] df1[4Percentages].median() 85.0 
+DZ • O df1UPercentage'Lmode() 
+e 85 Name: Percentage, dtype: int64 
+[8] df1UPercentagel.var() 
+55.0 
+• [9] df1UPercentagel.std() 
+7.416198487095663 
+
+31. L r28] df = pd.read_excel('lab7.xlsx',sheet_name = 1) 
+Os 
+[29] print(df) 
+Name marks 0 akhil 80.0 1 banu 76.0 2 ravi NaN 3 pooja 45.0 
+[31] dfrmarksi.fillna(method=affillm) 
+0 80.0 1 76.0 2 76.0 3 45.0 Name: marks, dtype: float64 
+
+Q dfi.describe() Age Percentage [-)-fl count 5.00000 5.000000 mean 1820000 84,000000 std 0.83666 7.416198 mm 18 00000 75 000000 25% 18.00000 80.000000 50%. 1922000 85.000000 75% 19.00000 85.000000 max 20.00000 95.000000 
+- b. Fill in the missing values. 
+v (21) df2 = pd.read_excelclab7.xlsx', sheet_nane 1) ss 
+[12] print(df2) 
+rare narks akhil 1 banu 76.0 2 ravi NaN 3 pooja 45.0 
+Z [13] df2.dtypes 
+Name object marks float64 dtype: object 
+( [14] require_cols = [0, 2) v (15] required_df = pd.read_excel('lab7.xlsx., usecols = require_cols) 31: [23) print(required_df) 
+Name Stream 0 Ankit Math 1 Rahul Science 2 Shaurya Commerce 3 Raghu math 4 Priya Science 
+
+
+
