@@ -1,0 +1,23 @@
+# import the libraries
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = pd.read_csv( "daily-total-female-births.csv")
+data
+
+sns. lineplot( x = 'Date',
+y = 'Births',
+data = data,
+label = 'DailyBirths')
+pos = [ '1959-01-01', '1959-02-01', '1959-03-01', '1959-04-01',
+'1959-05-01', '1959-06-01', '1959-07-01', '1959-08-01',
+'1959-09-01', '1959-10-01', '1959-11-01', '1959-12-01']
+lab = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
+'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+plt.xticks( pos, lab)
+
+# computing a 7 day rolling average
+data[ '7day_rolling_avg' ] = data.Births.rolling(7).mean().shift(-4)
+# viewing the dataset
+data.head(10)
