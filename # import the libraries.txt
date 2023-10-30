@@ -21,3 +21,22 @@ plt.xticks( pos, lab)
 data[ '7day_rolling_avg' ] = data.Births.rolling(7).mean().shift(-4)
 # viewing the dataset
 data.head(10)
+
+sns.lineplot( x = 'Date',
+y = 'Births',
+data = data,
+label = 'DailyBirths')
+# plot using rolling average
+sns.lineplot( x = 'Date',
+y = '7day_rolling_avg',
+data = data,
+label = 'Rollingavg')
+plt.xlabel('Months of the year 1959')
+# setting customized ticklabels for x axis
+pos = [ '1959-01-01', '1959-02-01', '1959-03-01', '1959-04-01',
+'1959-05-01', '1959-06-01', '1959-07-01', '1959-08-01',
+'1959-09-01', '1959-10-01', '1959-11-01', '1959-12-01']
+lab = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June',
+'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
+plt.xticks( pos, lab)
+plt.ylabel('Female Births')
